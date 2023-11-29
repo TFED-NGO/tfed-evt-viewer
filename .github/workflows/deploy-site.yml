@@ -1,0 +1,8 @@
+name: Push to TFED Site
+run-name: ${{ github.actor }} is sending your work to the TFED site! 🚀
+on:
+  push:
+    branches:
+      - master
+
+jobs:
