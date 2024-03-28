@@ -1,0 +1,80 @@
+@import "../../../assets/scss/themes";
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+
+.tab-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: first baseline;
+    background: #181E26;
+
+    .more {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease-in-out;
+        color: white;
+        background: none;
+        outline: none;
+        border: none;
+        &:hover {
+            cursor: pointer;
+            color: #0393FF;
+        }
+    }
+
+    &:hover {
+        .more {
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+}
+
+.tab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 150px;
+    min-width: 100px;
+    padding: 0.25rem 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: #222A35;
+
+    button {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease-in-out;
+        color: white;
+        background: none;
+        outline: none;
+        border: none;
+        &:hover {
+            cursor: pointer;
+            color: #0393FF;
+        }
+    }
+
+    @include themify($themes) {
+        color: themed('baseColorLight')
+    }
+
+    &.active {
+        border-bottom: 2px solid #0393FF;
+    }
+
+    &:hover {
+        cursor: pointer;
+        // make it just a little lighter
+        background: #2A3743;
+
+        button {
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+}
+
+.tab span {
+    max-width: fit-content;
+}

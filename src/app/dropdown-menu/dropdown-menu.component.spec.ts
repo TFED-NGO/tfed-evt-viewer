@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { MainMenuComponent } from './main-menu.component';
+import { DropdownMenuComponent } from './dropdown-menu.component';
 
-describe('MainMenuComponent', () => {
-  let component: MainMenuComponent;
-  let fixture: ComponentFixture<MainMenuComponent>;
+describe('DropdownMenuComponent', () => {
+  let component: DropdownMenuComponent;
+  let fixture: ComponentFixture<DropdownMenuComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainMenuComponent ],
+      declarations: [ DropdownMenuComponent ],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MainMenuComponent);
+    fixture = TestBed.createComponent(DropdownMenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

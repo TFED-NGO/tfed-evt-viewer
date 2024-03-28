@@ -6,6 +6,8 @@ import { ReadingTextComponent } from './view-modes/reading-text/reading-text.com
 import { TextSourcesComponent } from './view-modes/text-sources/text-sources.component';
 import { TextTextComponent } from './view-modes/text-text/text-text.component';
 import { TextVersionsComponent } from './view-modes/text-versions/text-versions.component';
+import { CustomTabsComponent } from './view-modes/draggable-tab-panel/draggable-tab-panel.component';
+import { MainMenuComponent } from './main-menu/main-menu.component';
 
 const appRoutes: Routes = [
   { path: 'imageText', component: ImageTextComponent },
@@ -14,6 +16,8 @@ const appRoutes: Routes = [
   { path: 'collation', component: CollationComponent },
   { path: 'textSources', component: TextSourcesComponent },
   { path: 'textVersions', component: TextVersionsComponent },
+  { path: 'development', component: CustomTabsComponent },
+  { path: 'developmentMain', component: MainMenuComponent }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' })],

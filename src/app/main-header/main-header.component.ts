@@ -24,7 +24,7 @@ export class MainHeaderComponent {
 
   public viewModes: ViewMode[] = AppConfig.evtSettings.ui.availableViewModes?.filter(((e) => e.enable)) ?? [];
   public currentViewMode$ = this.evtStatusService.currentViewMode$;
-  public mainMenuOpened = false;
+  public DropdownMenuOpened = false;
   public editionConfig: EditionConfig = AppConfig.evtSettings.edition;
   get editionHome() { return normalizeUrl(this.editionConfig.editionHome); }
 
@@ -43,14 +43,14 @@ export class MainHeaderComponent {
     this.evtStatusService.updateViewMode$.next(viewMode);
   }
 
-  toggleMainMenu(clickEvent: EVTBtnClickEvent) {
+  toggleDropdownMenu(clickEvent: EVTBtnClickEvent) {
     clickEvent.event.stopPropagation();
-    this.mainMenuOpened = !this.mainMenuOpened;
+    this.DropdownMenuOpened = !this.DropdownMenuOpened;
   }
 
   handleItemClicked(itemClicked: string) {
     if (itemClicked) {
-      this.mainMenuOpened = (itemClicked === 'theme' || itemClicked === 'language');
+      this.DropdownMenuOpened = (itemClicked === 'theme' || itemClicked === 'language');
     }
   }
 

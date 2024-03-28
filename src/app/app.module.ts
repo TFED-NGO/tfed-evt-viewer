@@ -92,7 +92,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { HtmlAttributesDirective } from './directives/html-attributes.directive';
 import { EvtInfoComponent } from './evt-info/evt-info.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
-import { MainMenuComponent } from './main-menu/main-menu.component';
+import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ImagePanelComponent } from './panels/image-panel/image-panel.component';
 import { PinboardPanelComponent } from './panels/pinboard-panel/pinboard-panel.component';
@@ -202,7 +202,7 @@ const DynamicComponents = [
     ImagePanelComponent,
     ImageTextComponent,
     MainHeaderComponent,
-    MainMenuComponent,
+    DropdownMenuComponent,
     ManuscriptThumbnailsViewerComponent,
     MsDescSectionComponent,
     MsDescSelectorComponent,

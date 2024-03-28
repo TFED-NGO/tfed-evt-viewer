@@ -1,0 +1,21 @@
+<ng-container ngIf="tab_counter0; else fileSelect">
+    <div>
+        <div class="tab-row">
+            <div class="tab active">
+                <span>Name</span>
+                <button>X</button>
+            </div>
+            <div class="tab">
+                <span>Name123456789</span>
+                <button>X</button>
+            </div>
+            <button class="more">+</button>
+        </div>
+        <div class="tab-content">
+        </div>
+    </div>
+</ng-container>
+
+<ng-template #fileSelect>
+    <div>No file selected</div>
+</ng-template>
